@@ -1,3 +1,95 @@
+# ModeShift 📱
+
+> A smart, context-aware phone mode application that automatically manages your calls, messages, and notifications based on your current activity.
+
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-blue)
+
+---
+
+## 🧠 What is ModeShift?
+
+ModeShift lets you activate a **context mode** based on what you're doing — and your phone handles everything automatically from there.
+
+No more manually silencing your phone. No more missed emergencies. No more distractions.
+
+---
+
+## 🚦 Modes
+
+| Mode | What it does |
+|------|-------------|
+| 🚗 **Driver Mode** | Auto-replies to calls/texts, detects emergencies, picks up only if critical |
+| 😴 **Sleep Mode** | Blocks everything except close contacts and alarms |
+| 📚 **Focus Mode** | Silences all, sends auto-reply "I'm currently focusing" |
+| 💪 **Gym Mode** | Blocks calls, allows music notifications only |
+| 💼 **Meeting Mode** | Professional auto-reply, calendar-aware |
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Mobile App | Flutter |
+| Backend | Node.js + Express |
+| Database | PostgreSQL (Supabase) |
+| Authentication | Supabase Auth |
+| SMS/Call Handling | Twilio API |
+| Deployment | Railway (backend) + Supabase (DB) |
+
+---
+
+## 📁 Project Structure
+```
+ModeShift/
+├── README.md
+├── .gitignore
+├── docs/
+│   ├── architecture.md
+│   ├── api.md
+│   ├── database.md
+│   └── setup.md
+├── backend/
+│   └── (Node.js + Express server)
+└── frontend/
+    └── (Flutter mobile app)
+```
+
+---
+
+## 📄 Documentation
+
+- [Architecture Overview](docs/architecture.md)
+- [API Documentation](docs/api.md)
+- [Database Design](docs/database.md)
+- [Setup Guide](docs/setup.md)
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Project setup & folder structure
+- [ ] Backend — authentication & user management
+- [ ] Backend — mode configuration APIs
+- [ ] Flutter app — UI & mode switching
+- [ ] Twilio integration — call & SMS handling
+- [ ] Testing & bug fixes
+- [ ] Deployment
+
+---
+
+## 👨‍💻 Author
+
+**lgupta-15**
+© 2025 lgupta-15. All rights reserved. You may copy this code but may not modify or redistribute it.
+
+---
+
+> *"Your phone should adapt to your life — not interrupt it."*
+
+
 ModeShift — The Plan
 What it does:
 You activate a mode (Drive, Sleep, Focus, Gym, Meeting) and ModeShift automatically handles your calls and messages intelligently based on that context.
@@ -188,3 +280,5 @@ Select MIT License
 Put your name in the name field
 Click Review and submit
 Commit it to main
+
+
