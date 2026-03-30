@@ -132,3 +132,59 @@ user.email=erlakshitanitj@gmail.com
 AWS/GCP/Azure — powerful but overkill and confusing for a first deployment. You'd spend a week just on configuration.
 Heroku — was the classic choice but killed its free tier.
 Railway — simplest deployment experience right now, free tier, deploys directly from GitHub. Perfect for first project.
+
+
+FieldValueRepository namemodeshiftDescriptionA smart context-aware phone mode appVisibilityPublicAdd a README✅ Check thisAdd .gitignoreChoose Node from the dropdownChoose a licenseMIT License
+Why Public visibility?
+
+Private means only you can see the code. Public means anyone can.
+For a learning project, public is better because:
+
+It builds your portfolio — employers and collaborators can see your work
+It shows your GitHub activity (the green squares on your profile)
+The open source community can give you feedback
+
+
+You're not building anything secretive here, so public makes total sense
+
+
+Why .gitignore?
+When you write code, your project folder will have files that should never be uploaded to GitHub:
+
+Secret keys and passwords (like your Supabase key, Twilio key)
+Heavy folders like node_modules (thousands of files, not your code)
+System junk files like .DS_Store on Mac
+
+.gitignore is a file that tells Git — "ignore these files, never upload them."
+Without it you could accidentally push your passwords to the internet. It's happened to thousands of developers and it's a serious problem.
+
+Why MIT License?
+A license tells people what they can and can't do with your code. Without a license, legally nobody can use or learn from your code even if it's public.
+MIT License is the most common open source license — it basically says:
+
+Anyone can use, copy, learn from this code
+Just give me credit
+I'm not responsible if something breaks
+
+It's the standard choice for personal and open source projects.
+
+Now let's add them
+Adding .gitignore:
+
+In your repo on GitHub click Add file → Create new file
+Name it exactly .gitignore (with the dot)
+Go to 👉 https://gitignore.io
+Type Node and Flutter → click Create
+Copy everything → paste it into your .gitignore file on GitHub
+Scroll down → click Commit changes → Commit directly to main
+
+
+Adding License:
+
+In your repo click Add file → Create new file
+Name it LICENSE
+On the right side GitHub will show a button Choose a license template — click it
+Select MIT License
+Put your name in the name field
+Click Review and submit
+Commit it to main
