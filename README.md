@@ -281,4 +281,17 @@ Put your name in the name field
 Click Review and submit
 Commit it to main
 
+Keep Twilio in the architecture — but mock it during development.
+Meaning your backend will have the exact same logic, same API structure, same database — but instead of actually sending SMS during dev, we log it to the console. Then when you're ready to demo, you use Twilio's free trial credit for just that demo.
+This way:
+
+Your portfolio shows real full stack architecture
+You learn the correct patterns
+You spend zero dollars during building
+You can swap real Twilio in with literally one config change
+
+Flutter → Route → Middleware → Controller → Model → Database
+                                    ↓
+                                Services
+                                (Twilio)
 
