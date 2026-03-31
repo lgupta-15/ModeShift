@@ -16,30 +16,28 @@ Stores all registered users.
 |--------|------|-------------|
 | `id` | `uuid` | Primary key, auto-generated |
 | `email` | `varchar` | User's email address |
-| `full_name` | `varchar` | User's full name |
-| `phone_number` | `varchar` | User's phone number |
+| `password_hash` | `varchar` | Hashed password — never stored as plain text |
+| `phone_number` | `varchar` | User's phone number for Twilio |
 | `created_at` | `timestamp` | Account creation time |
 | `updated_at` | `timestamp` | Last update time |
 
 ---
 
 ### 2. `modes`
-Stores all available modes in the system.
+Stores system-wide mode definitions. Shared across all users.
 
 | Column | Type | Description |
 |--------|------|-------------|
 | `id` | `uuid` | Primary key, auto-generated |
-| `name` | `varchar` | Mode name (e.g. Driver, Sleep, Focus) |
+| `name` | `varchar` | Mode name (e.g. Drive, Sleep, Study) |
 | `description` | `text` | What this mode does |
 | `icon` | `varchar` | Icon identifier for the UI |
 | `created_at` | `timestamp` | When this mode was added |
 
-**Default modes:**
-- 🚗 Driver Mode
+**V1 modes:**
+- 🚗 Drive Mode
 - 😴 Sleep Mode
-- 📚 Focus Mode
-- 💪 Gym Mode
-- 💼 Meeting Mode
+- 📚 Study Mode
 
 ---
 
@@ -94,11 +92,13 @@ users
 
 | Decision | Reason |
 |----------|--------|
-| UUID as primary keys | More secure than sequential integers, industry standard |
+| UUID as primary keys | Harder to guess than integers — more secure |
+| Separate `modes` and `user_mode_configs` tables | Mode definitions are shared — user settings are personal |
+| `password_hash` not `password` | Never store plain text passwords |
 | `allowed_contacts` as array | A user can whitelist multiple contacts per mode |
-| Separate `activity_logs` table | Keeps history clean and separate from configuration |
+| Separate `activity_logs` table | Keeps history clean and separate from config |
 | `is_active` on config level | Only one mode should be active at a time per user |
 
 ---
 
-*Last updated: March 2025*
+*Last updated: March 2026*
